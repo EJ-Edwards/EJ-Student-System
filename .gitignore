@@ -1,0 +1,10 @@
+src/edu/ej/student/ViewStudents.class
+src/edu/ej/student/ViewGrades.class
+src/edu/ej/student/AssignGrades.class
+src/edu/ej/student/AddStudent.class
+src/edu/ej/student/Export.class
+src/edu/ej/student/Database.class
+src/edu/ej/student/Student.class
+src/edu/ej/student/StudentSystem.class
+src/edu/ej/student/GradeCalculator.class
+src/edu/ej/student/Menu.class
