@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'application'
-    // shadow plugin creates a "fat" jar containing all dependencies
     id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
@@ -13,16 +12,13 @@ repositories {
 }
 
 dependencies {
-    // sqlite driver will be pulled from Maven Central automatically
     implementation 'org.xerial:sqlite-jdbc:3.43.0.0'
 }
 
 application {
-    // entry point of your program
     mainClass = 'edu.ej.student.Menu'
 }
 
-// configure the shadow jar output name
 tasks.named('shadowJar') {
     archiveBaseName.set('EJ-Student-System')
     archiveVersion.set('1.0')
