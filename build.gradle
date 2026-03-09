@@ -12,15 +12,14 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.xerial:sqlite-jdbc:3.43.0.0'
-}
+    implementation 'org.xerial:sqlite-jdbc:3.43.0.0' 
 
 application {
-    mainClass = 'edu.ej.student.Menu'
+    mainClass = 'edu.ej.student.API'
 }
-
 tasks.named('shadowJar') {
     archiveBaseName.set('EJ-Student-System')
     archiveVersion.set('1.0')
     archiveClassifier.set('all')
+}
 }
