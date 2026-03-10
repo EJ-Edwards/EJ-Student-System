@@ -23,4 +23,3 @@ tasks.named('shadowJar') {
     archiveVersion.set('1.0')
     archiveClassifier.set('all')
 }
-}
