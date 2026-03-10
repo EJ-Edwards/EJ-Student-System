@@ -29,6 +29,13 @@ public class API {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/students", new StudentHandler());
+        server.createContext("/", exchange -> {
+            String msg = "{\"endpoints\":[\"/students\",\"/students/{id}\"],\"methods\":[\"GET\",\"POST\",\"PUT\",\"DELETE\"]}";
+            byte[] bytes = msg.getBytes(StandardCharsets.UTF_8);
+            exchange.getResponseHeaders().set("Content-Type", "application/json; charset=UTF-8");
+            exchange.sendResponseHeaders(200, bytes.length);
+            try (OutputStream os = exchange.getResponseBody()) { os.write(bytes); }
+        });
         server.setExecutor(null); // default executor
         System.out.println("Server started on http://localhost:" + port);
         server.start();
