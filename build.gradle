@@ -15,6 +15,14 @@ dependencies {
     implementation 'org.xerial:sqlite-jdbc:3.43.0.0'
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+
 application {
     mainClass = 'edu.ej.student.API'
 }
